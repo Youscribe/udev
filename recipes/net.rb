@@ -23,7 +23,7 @@ if Chef::Config[:solo]
 else
   begin
     udev_net = data_bag_item('udev', node.hostname)
-    node['udev']['net'] = udev_net['net'] if udev_net
+    node.set['udev']['net'] = udev_net['net'] if udev_net
   rescue
     Chef::Log.info "no 'udev' data bag entry for '#{node.hostname}' found."
   end
