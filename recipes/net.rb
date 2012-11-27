@@ -17,7 +17,6 @@
 # limitations under the License.
 #
 
-#search for any apt-cacher-ng caching proxies
 if Chef::Config[:solo]
   Chef::Log.warn("This recipe attempts to use search with data bags. Chef Solo does not support this.")
 else
